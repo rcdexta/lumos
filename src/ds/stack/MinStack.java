@@ -1,4 +1,4 @@
-package ds;
+package ds.stack;
 
 public class MinStack extends Stack<Integer> {
 
