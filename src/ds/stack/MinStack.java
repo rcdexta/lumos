@@ -19,10 +19,10 @@ public class MinStack extends Stack<Integer> {
     }
 
     @Override
-    public void push(Integer newElement) {
-        super.push(newElement);
-        if (minElements.isEmpty() || this.recentMinElement() >= newElement) {
-            minElements.push(newElement);
+    public void push(Integer item) {
+        super.push(item);
+        if (minElements.isEmpty() || this.recentMinElement() >= item) {
+            minElements.push(item);
         }
     }
 

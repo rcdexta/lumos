@@ -5,35 +5,35 @@ import java.util.List;
 
 public class Stack<T> {
 
-    private List<T> elements;
+    private List<T> items;
 
     public Stack() {
-        elements = new ArrayList<>();
+        items = new ArrayList<>();
     }
 
     public T pop() throws StackEmptyException {
-        if (elements.isEmpty()) throw new StackEmptyException();
-        return elements.remove(currentIndex());
+        if (items.isEmpty()) throw new StackEmptyException();
+        return items.remove(currentIndex());
     }
 
-    public void push(T newElement) {
-        elements.add(newElement);
+    public void push(T item) {
+        items.add(item);
     }
 
     public boolean isEmpty() {
-        return elements.isEmpty();
+        return items.isEmpty();
     }
 
     public T peek() throws StackEmptyException {
-        if (elements.isEmpty()) throw new StackEmptyException();
-        return elements.get(currentIndex());
+        if (items.isEmpty()) throw new StackEmptyException();
+        return items.get(currentIndex());
     }
 
     private int currentIndex() {
-        return elements.size() - 1;
+        return items.size() - 1;
     }
 
     public Integer length() {
-        return elements.size();
+        return items.size();
     }
 }
