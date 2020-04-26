@@ -1,11 +1,11 @@
 package ds.sorting;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class QuickSort {
 
+    // O(n*logn)
     public static List<Integer> sort(List<Integer> elements) {
         if (elements.size() < 2) return elements;
 

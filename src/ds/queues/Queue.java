@@ -1,4 +1,4 @@
-package ds.queue;
+package ds.queues;
 
 import java.util.ArrayList;
 import java.util.List;

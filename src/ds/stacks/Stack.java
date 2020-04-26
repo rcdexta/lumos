@@ -1,4 +1,4 @@
-package ds.stack;
+package ds.stacks;
 
 import java.util.ArrayList;
 import java.util.List;

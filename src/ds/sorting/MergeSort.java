@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MergeSort {
-
+    // O(n*logn)
     public static List<Integer> mergeSort(List<Integer> elements) {
         if (elements.size() < 2) {
             return elements;

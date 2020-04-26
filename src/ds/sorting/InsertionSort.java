@@ -4,6 +4,7 @@ import java.util.List;
 
 public class InsertionSort {
 
+    // O(n^2)
     public static List<Integer> sort(List<Integer> elements) {
         // The idea here is that the beginning of your list is sorted and the everything else is assumed to be an unsorted mess.
         // The outer loop goes over the whole list, the index of which signifies where the "sorted" part of the list is. The inner

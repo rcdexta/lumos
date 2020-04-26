@@ -1,4 +1,4 @@
-package ds.stack;
+package ds.stacks;
 
 import java.util.Collections;
 import java.util.List;

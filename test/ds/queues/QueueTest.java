@@ -1,6 +1,5 @@
-package ds.queue;
+package ds.queues;
 
-import ds.stack.MinStack;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

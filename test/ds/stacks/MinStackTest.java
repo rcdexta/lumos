@@ -1,7 +1,5 @@
-package ds.stack;
+package ds.stacks;
 
-import ds.stack.MinStack;
-import ds.stack.StackEmptyException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

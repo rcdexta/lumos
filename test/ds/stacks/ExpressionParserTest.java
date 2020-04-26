@@ -1,11 +1,11 @@
-package ds.stack;
+package ds.stacks;
 
-import ds.stack.ExpressionParser.InvalidExpression;
+import ds.stacks.ExpressionParser.InvalidExpression;
 import org.junit.jupiter.api.Test;
 
-import static ds.stack.ExpressionParser.solvePrefix;
+import static ds.stacks.ExpressionParser.solvePrefix;
 import static org.junit.jupiter.api.Assertions.*;
-import static ds.stack.ExpressionParser.solvePostfix;
+import static ds.stacks.ExpressionParser.solvePostfix;
 
 class ExpressionParserTest {
 

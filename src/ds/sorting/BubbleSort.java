@@ -4,6 +4,7 @@ import java.util.List;
 
 public class BubbleSort {
 
+    // O(n^2)
     public static List<Integer> sort(List<Integer> elements) {
         // Bubble sort works by comparing two adjacent numbers next to each other and then
         // swapping their places if the smaller index's value is larger than the larger
