@@ -12,8 +12,8 @@ class MergeSortTest {
 
     @Test
     void mergeSort() {
-//        List<Integer> sortedList = MergeSort.mergeSort(new ArrayList<>(asList(10, 5, 3, 8, 2, 6, 4, 7, 9, 1)));
-//        assertEquals(asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), sortedList);
+        List<Integer> sortedList = MergeSort.mergeSort(new ArrayList<>(asList(10, 5, 3, 8, 2, 6, 4, 7, 9, 1)));
+        assertEquals(asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10), sortedList);
 
         List<Integer> sortedList2 = MergeSort.mergeSort(new ArrayList<>(asList(9,8,5,3,2)));
         assertEquals(asList(2, 3, 5, 8, 9), sortedList2);
