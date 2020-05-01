@@ -1,4 +1,4 @@
-package ds.sorting;
+package sorting;
 
 import org.junit.jupiter.api.Test;
 
