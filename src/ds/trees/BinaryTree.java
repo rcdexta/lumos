@@ -1,4 +1,4 @@
-package trees;
+package ds.trees;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

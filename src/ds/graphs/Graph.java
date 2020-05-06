@@ -1,4 +1,4 @@
-package graphs;
+package ds.graphs;
 
 import java.util.*;
 import java.util.function.Consumer;
