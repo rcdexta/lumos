@@ -1,5 +1,7 @@
 package bst;
 
+import java.util.Deque;
+
 public class BSTClosest {
 
     /**
@@ -19,13 +21,14 @@ public class BSTClosest {
             this.left = left;
             this.right = right;
         }
+
     }
 
     public int closestValue(TreeNode root, double target) {
-        return traverseFind(root, target, Integer.MAX_VALUE, root.val);
+        return traverseFind(root, target, Math.abs(root.val - target), root.val);
     }
 
-    public int traverseFind(TreeNode root, double target, double minDiff, int closest) {
+    private int traverseFind(TreeNode root, double target, double minDiff, int closest) {
         if (root == null) return closest;
         double diff = Math.abs(root.val - target);
         if (minDiff > diff) {
