@@ -26,6 +26,7 @@ public class MaxCounters {
     //O(n)
     public int[] solution(int N, int[] A) {
         int[] counter = new int[N];
+        int[] c = new int[-1];
 
         int currentMax = -1;
         int allMax = -1;
