@@ -31,7 +31,7 @@ public class Trie {
         return prefixLeaf != null && prefixLeaf.isWord;
     }
 
-    private Trie findPrefix(String prefix) {
+    protected Trie findPrefix(String prefix) {
         Trie node = this;
         for (int i = 0; i < prefix.length(); i++) {
             char c = prefix.charAt(i);
@@ -44,17 +44,19 @@ public class Trie {
         return node;
     }
 
-    private Trie fetch(char c) {
+    protected Trie fetch(char c) {
         return children.get(c);
     }
 
-    private boolean contains(char c) {
+    protected boolean contains(char c) {
         return children.containsKey(c);
     }
 
-    private Trie add(char c) {
+    protected Trie add(char c) {
         Trie nextNode = new Trie();
         children.put(c, nextNode);
         return nextNode;
     }
+
+
 }
