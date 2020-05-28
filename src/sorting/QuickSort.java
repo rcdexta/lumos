@@ -24,11 +24,6 @@ public class QuickSort {
             }
         }
 
-//        System.out.println("Left: " + left.toString());
-//        System.out.println("Pivot: " + pivot);
-//        System.out.println("Right: " + right.toString());
-//        System.out.println("---");
-
         //[3] Recursively call the sort on left and right arrays.
         //[4] Finally merge the left + pivot + right as one array
         List<Integer> results = new ArrayList<>(sort(left));

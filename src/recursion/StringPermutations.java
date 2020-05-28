@@ -1,7 +1,5 @@
 package recursion;
 
-import java.util.Arrays;
-
 public class StringPermutations {
 
     public static void permutations(char[] array, int currentIndex) {
