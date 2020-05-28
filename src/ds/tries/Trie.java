@@ -21,6 +21,23 @@ public class Trie {
         node.isWord = true;
     }
 
+
+    protected Trie fetch(char c) {
+        return children.get(c);
+    }
+
+    protected boolean contains(char c) {
+        return children.containsKey(c);
+    }
+
+    protected Trie add(char c) {
+        Trie nextNode = new Trie();
+        children.put(c, nextNode);
+        return nextNode;
+    }
+
+    // DO NOT READ BELOW!!!
+
     public boolean startsWith(String prefix) {
         Trie prefixLeaf = findPrefix(prefix);
         return prefixLeaf != null;
@@ -44,19 +61,6 @@ public class Trie {
         return node;
     }
 
-    protected Trie fetch(char c) {
-        return children.get(c);
-    }
-
-    protected boolean contains(char c) {
-        return children.containsKey(c);
-    }
-
-    protected Trie add(char c) {
-        Trie nextNode = new Trie();
-        children.put(c, nextNode);
-        return nextNode;
-    }
 
 
 }
