@@ -6,35 +6,44 @@ public class LRUCache {
 
     int capacity;
     Map<Integer, Integer> cache;
-    LinkedList<Integer> tracker;
+    LinkedList<Integer> queue;
 
     public LRUCache(int capacity) {
         this.capacity = capacity;
         cache = new HashMap<>(capacity);
-        tracker = new LinkedList<>();
-    }
-
-    public int get(int key) {
-        Integer value = cache.getOrDefault(key, -1);
-        if (value != -1) moveToFront(key);
-        return value;
-    }
-
-    private void moveToFront(Integer num) {
-        tracker.remove(num); // You can track the index of the number in the same hashmap instead of doing a scan
-        tracker.addFirst(num);
+        queue = new LinkedList<>();
     }
 
     public void put(int key, int value) {
         if (cache.containsKey(key)) {
-            moveToFront(key);
-        } else {
-            if (tracker.size() == capacity) {
-                Integer leastUsedNumber = tracker.removeLast();
-                cache.remove(leastUsedNumber);
-            }
-            tracker.addFirst(key);
+            evictElement(key);
+        } else if (queue.size() == capacity){
+            Integer lastElement = queue.removeLast();
+            cache.remove(lastElement);
         }
         cache.put(key, value);
+        queue.addFirst(key);
+    }
+
+    public Integer get(int key) {
+        if (cache.containsKey(key)) {
+            evictElement(key);
+            queue.addFirst(key);
+            return cache.get(key);
+        } else {
+            return null;
+        }
+    }
+
+    private void evictElement(int element) {
+        int index = 0, i = 0;
+        for (Integer next : queue) {
+            if (next == element) {
+                index = i;
+                break;
+            }
+            i++;
+        }
+        queue.remove(index);
     }
 }
