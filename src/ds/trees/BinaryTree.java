@@ -21,9 +21,9 @@ import java.util.function.Consumer;
  */
 public class BinaryTree {
 
-    String value;
-    BinaryTree left;
-    BinaryTree right;
+    public String value;
+    public BinaryTree left;
+    public BinaryTree right;
 
     public BinaryTree(String value) {
         this.value = value;
