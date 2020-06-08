@@ -1,5 +1,6 @@
 package ds.graphs;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -9,8 +10,10 @@ import java.util.Set;
 
 class ClonerTest {
 
-    @Test
-    void testClone() {
+    Node root;
+
+    @BeforeEach
+    void setup() {
         Node node0 = new Node(0);
         Node node3 = new Node(3);
         Node node4 = new Node(4);
@@ -31,14 +34,24 @@ class ClonerTest {
 
         node2.addNeighbor(node0);
 
+        root = node0;
+    }
+
+    @Test
+    void testClone() {
         System.out.println("Original:");
-        printGraph(node0);
+        printGraph(root);
 
         System.out.println();
         System.out.println("after clone:");
-        Node clone = Cloner.clone(node0);
+        Node clone = Cloner.clone(root);
 
         printGraph(clone);
+    }
+
+    @Test
+    void shouldDFS() {
+        Cloner.dfsIterative(root, node -> System.out.println(node));
     }
 
     void printGraph(Node node) {
