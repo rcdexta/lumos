@@ -29,12 +29,9 @@ public class KahnsTopologicalSort {
         while(!queue.isEmpty()) { //T:O(V)
             Integer element = queue.poll();
             results.add(element);
-            System.out.println(Arrays.toString(inDegrees));
-            System.out.println("Adding to result:" + element);
 
             for(Integer n: graph.adjList.get(element)) { //T:O(E)
                 inDegrees[n]--;
-//                System.out.println("Reducing indegree: " + n + " to " + inDegrees[n]);
                 if (inDegrees[n] == 0) {
                     queue.add(n);
                 }
