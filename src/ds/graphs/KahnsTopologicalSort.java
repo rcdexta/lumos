@@ -2,7 +2,7 @@ package ds.graphs;
 
 import java.util.*;
 
-public class Kahns {
+public class KahnsTopologicalSort {
 
     public static List<Integer> topologicalSort(Graph graph) {
         int[] inDegrees = new int[graph.nodes.size()];// S:O(V)

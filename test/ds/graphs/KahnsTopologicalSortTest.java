@@ -5,9 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class KahnsTest {
+class KahnsTopologicalSortTest {
 
     // Reference: https://www.geeksforgeeks.org/topological-sorting-indegree-based-solution/
 
@@ -33,7 +31,7 @@ class KahnsTest {
 
     @Test
     void topologicalSort() {
-        List<Integer> results = Kahns.topologicalSort(graph);
+        List<Integer> results = KahnsTopologicalSort.topologicalSort(graph);
         System.out.println(results);
     }
 }
