@@ -1,8 +1,12 @@
 package recursion;
 
+import java.util.Stack;
+
 public class StringReverser {
 
     public static void main(String[] args) {
+        Stack stack = new Stack();
+
         String rev = reverse("abcdefg");
         System.out.println(rev);
 

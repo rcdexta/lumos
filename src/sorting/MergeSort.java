@@ -5,13 +5,13 @@ import java.util.List;
 
 public class MergeSort {
     // O(n*logn)
-    public static List<Integer> mergeSort(List<Integer> elements) {
-        if (elements.size() < 2) {
-            return elements;
+    public static List<Integer> mergeSort(List<Integer> nums) {
+        if (nums.size() < 2) {
+            return nums;
         }
-        int mid = elements.size() / 2;
-        List<Integer> array1 = elements.subList(0, mid);
-        List<Integer> array2 = elements.subList(mid, elements.size());
+        int mid = nums.size() / 2;
+        List<Integer> array1 = nums.subList(0, mid);
+        List<Integer> array2 = nums.subList(mid, nums.size());
 
         //[1] Split the given array at mid point and recursively merge by sorting
         return merge(mergeSort(array1), mergeSort(array2));
