@@ -30,11 +30,7 @@ public class JumpGame {
     }
 
     public boolean canJumpBF(int position, int[] nums) {
-        stack.push(position);
-        System.out.println(stack);
-
         if (position == nums.length - 1) {
-            System.out.printf(" = %b %n", true);
             return true;
         }
 
@@ -45,9 +41,6 @@ public class JumpGame {
             }
         }
 
-        stack.pop();
-
-        System.out.printf(" = %b %n", false);
         return false;
     }
 

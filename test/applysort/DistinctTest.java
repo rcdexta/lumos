@@ -11,4 +11,5 @@ class DistinctTest {
         Distinct s = new Distinct();
         assertEquals(3, s.solution(new int[]{2, 1, 1, 2, 3, 1}));
     }
+
 }

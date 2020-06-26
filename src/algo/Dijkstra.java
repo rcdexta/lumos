@@ -36,7 +36,7 @@ public class Dijkstra {
                 if (!settled.contains(n.name)) {
                     int cost = currentCost + n.cost;
 
-                    // if node not alreadt settled, find new cost and add if cheaper
+                    // if node not already settled, find new cost and add if cheaper
                     if (distance.get(n.name) > cost) {
                         distance.put(n.name, cost);
                     }

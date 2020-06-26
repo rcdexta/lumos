@@ -7,7 +7,7 @@ import java.util.Arrays;
  *  as rows
  *
  *  if j >= coin[i]
- *      dp[i][j] = Math.min(dp[i-1][j], 1 + dp[i][j - coin[i]])
+ *      dp[i][j] = Math.min(dp[i-1][j], 1 + dp[i][j] - coin[i]])
  *  else
  *     dp[i-1][j]
  */

@@ -36,8 +36,6 @@ public class Trie {
         return nextNode;
     }
 
-    // DO NOT READ BELOW!!!
-
     public boolean startsWith(String prefix) {
         Trie prefixLeaf = findPrefix(prefix);
         return prefixLeaf != null;

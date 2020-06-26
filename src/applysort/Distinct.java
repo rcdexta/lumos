@@ -30,4 +30,13 @@ public class Distinct {
         }
         return distinctCount;
     }
+
+    public int oneDistinct(int [] nums) {
+        int x = nums[0];
+        for(int i=1;i<nums.length;i++) {
+            x = x ^ nums[i];
+            System.out.println(x);
+        }
+        return x;
+    }
 }
