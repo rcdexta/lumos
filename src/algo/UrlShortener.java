@@ -1,5 +1,7 @@
 package algo;
 
+import java.util.Base64;
+
 public class UrlShortener {
 
     public static void shorten(String url) {
